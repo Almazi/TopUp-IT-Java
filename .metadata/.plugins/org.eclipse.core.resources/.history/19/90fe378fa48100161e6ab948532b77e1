@@ -1,0 +1,114 @@
+package Swing;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+import javax.swing.*;
+
+public class PizzaOrderTaker implements ActionListener, ItemListener {
+	
+	JFrame frame;
+	JLabel nameLabel;
+	JLabel addressLabel;
+	JLabel pizzaTypeLabel;
+	JLabel pizzaSizeLabel;
+	JLabel toppingsLabel;
+	JTextField nameText;
+	JTextArea addressText;
+	JComboBox typeMenu;
+	JRadioButton largeRadioButton;
+	JRadioButton mediumRadioButton;
+	JRadioButton smallRadioButton;
+	ButtonGroup sizeButtonGroup;
+	
+	JCheckBox toppingCheeseBox;
+	JCheckBox toppingSausageBox;
+	JCheckBox toppingBaconBox;
+	JCheckBox toppingMushroomBox;
+	
+	JButton orderButton;
+	JButton cancelButton;
+	
+	PizzaOrderTaker(){
+		frame = new JFrame("Take The Order");
+		frame.setBounds(500, 150, 350, 500);
+		nameLabel = new JLabel("Name :");
+		nameLabel.setBounds(30,20,100,50);
+		
+		addressLabel = new JLabel("Address :");
+		addressLabel.setBounds(30,70,100,50);
+		
+		pizzaTypeLabel = new JLabel("Type :");
+		pizzaTypeLabel.setBounds(30,170,100,50);
+		
+		pizzaSizeLabel = new JLabel("Size :");
+		pizzaSizeLabel.setBounds(30,220,100,50);
+		
+		toppingsLabel = new JLabel("Toppings :");
+		toppingsLabel.setBounds(30,270,100,50);
+		
+		nameText = new JTextField();
+		nameText.setBounds(130,30,170,30);
+		
+		addressText = new JTextArea();
+		addressText.setBounds(130,80,170,80);
+		
+
+		typeMenu = new JComboBox();
+		typeMenu.setBounds(130, 180, 170, 30);
+		typeMenu.addItem("New York-Style Pizza");
+		typeMenu.addItem("Neapolitan Pizza");
+		typeMenu.addItem("Deep Dish Pizza");
+		typeMenu.addItem("Sicilian Pizza");
+		
+
+		largeRadioButton = new JRadioButton("Large for 6 Person");
+		largeRadioButton.setBounds(120, 220, 170, 30);
+		mediumRadioButton = new JRadioButton("Medium for 4 Person");
+		mediumRadioButton.setBounds(120, 240, 170, 30);
+		smallRadioButton = new JRadioButton("Small for 2 Person");
+		smallRadioButton.setBounds(120, 260, 170, 30);
+		
+		sizeButtonGroup =  new ButtonGroup();
+		sizeButtonGroup.add(largeRadioButton);
+		sizeButtonGroup.add(mediumRadioButton);
+		sizeButtonGroup.add(smallRadioButton);
+		
+		frame.add(nameLabel);
+		frame.add(addressLabel);
+		frame.add(pizzaTypeLabel);
+		frame.add(pizzaSizeLabel);
+		frame.add(toppingsLabel);
+		frame.add(nameText);
+		frame.add(addressText);
+		frame.add(typeMenu);
+		frame.add(largeRadioButton);
+		frame.add(mediumRadioButton);
+		frame.add(smallRadioButton);
+		frame.setLayout(null);
+		frame.setVisible(true);
+	}
+	
+	
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new PizzaOrderTaker();
+
+	}
+
+}

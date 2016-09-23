@@ -1,0 +1,32 @@
+package Swing;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+
+import javax.swing.*;
+
+public class PizzaOrderTaker implements ActionListener, ItemListener {
+	JFrame frame;
+	JLabel nameLabel;
+	JLabel addressLabel;
+	JLabel pizzaTypeLabel;
+	JLabel pizzaSizeLabel;
+	JTextField nameText;
+	JTextArea addressText;
+	JComboBox typeMenu;
+	JRadioButton largeRadioButton;
+	JRadioButton mediumRadioButton;
+	JRadioButton smallRadioButton;
+	ButtonGroup sizeButtonGroup;
+	JButton orderButton;
+	JButton cancelButton;
+	PizzaOrderTaker(){
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

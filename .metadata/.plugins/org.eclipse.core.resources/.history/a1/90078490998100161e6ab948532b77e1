@@ -1,0 +1,19 @@
+package Swing;
+
+import javax.swing.*;
+
+public class PizzaOrderTaker {
+	JFrame frame;
+	JLabel nameLabel;
+	JLabel addressLabel;
+	JLabel pizzaTypeLabel;
+	JLabel pizzaSizeLabel;
+	PizzaOrderTaker(){
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
