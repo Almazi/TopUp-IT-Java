@@ -1,4 +1,4 @@
-package Swing;
+package _1_Swing_Basic;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
