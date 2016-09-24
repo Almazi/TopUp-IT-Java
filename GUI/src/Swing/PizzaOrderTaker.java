@@ -38,6 +38,7 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 	JButton cancelButton;
 	
 	String name;
+	String address;
 	String total;
 	int pizzaPrice = 0;
 	int toppingPrice = 0;;
@@ -46,7 +47,7 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 	
 	String type;
 	String size;
-	String toppings;
+	String toppings = " ";
 	String quantityString;
 	
 	PizzaOrderTaker(){
@@ -170,66 +171,6 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 
 	@Override
 	public void itemStateChanged(ItemEvent e) {
-		if(e.getItem() == "New York-Style Pizza"){
-			if(largeRadioButton.isSelected()){
-				type = "Large - New York-Style Pizza";
-				pizzaPrice = 1050;
-			}
-			if(mediumRadioButton.isSelected()){
-				type = "Medium - New York-Style Pizza";
-				pizzaPrice = 750;
-			}
-			if(smallRadioButton.isSelected()){
-				type = "Small - New York-Style Pizza";
-				pizzaPrice = 550;
-			}
-			
-		}
-		if(e.getItem() == "Neapolitan Pizza"){
-			if(largeRadioButton.isSelected()){
-				type = "Large - Neapolitan Pizza";
-				pizzaPrice = 999;
-			}
-			if(mediumRadioButton.isSelected()){
-				type = "Medium - Neapolitan Pizza";
-				pizzaPrice = 699;
-			}
-			if(smallRadioButton.isSelected()){
-				type = "Small - Neapolitan Pizza";
-				pizzaPrice = 499;
-			}
-			
-		}
-		if(e.getItem() == "Deep Dish Pizza"){
-			if(largeRadioButton.isSelected()){
-				type = "Large - Deep Dish Pizza";
-				pizzaPrice = 1369;
-			}
-			if(mediumRadioButton.isSelected()){
-				type = "Medium - Deep Dish Pizza";
-				pizzaPrice = 969;
-			}
-			if(smallRadioButton.isSelected()){
-				type = "Small -Deep Dish Pizza";
-				pizzaPrice = 669;
-			}
-			
-		}
-		if(toppingCheeseBox.isSelected()){
-			toppingPrice = 50;
-		}
-		if(toppingBaconBox.isSelected()){
-			toppingPrice = 90;
-		}
-		if(toppingSausageBox.isSelected()){
-			toppingPrice = 110;
-		}
-		/*if(e.getItem() == "0" || e.getItem() == "1" || e.getItem() == "2" || e.getItem() == "3" || e.getItem() == "4" 
-				|| e.getItem() == "5" ){
-			
-			quantity = (int) e.getItem();
-		}*/
-		
 		
 	}
 
@@ -237,12 +178,41 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == orderButton){
+			System.out.println(pizzaPrice);
 			name = nameText.getText();
+			address = addressText.getText();
+			type = typeMenu.getSelectedItem().toString();
+			if(largeRadioButton.isSelected()){
+				size = largeRadioButton.getText();
+			}
+			if(mediumRadioButton.isSelected()){
+				size = mediumRadioButton.getText();
+			}
+			if(smallRadioButton.isSelected()){
+				size = smallRadioButton.getText();
+			}
+			if(toppingCheeseBox.isSelected()){
+				toppings = toppings + toppingCheeseBox.getText();
+			}
+			if(toppingSausageBox.isSelected()){
+				toppings = toppings + toppingSausageBox.getText();
+			}if(toppingBaconBox.isSelected()){
+				toppings = toppings + toppingBaconBox.getText();
+			}
+			
+			quantityString = quantityMenu.getSelectedItem().toString();
+			JOptionPane.showMessageDialog(null, "Order Detail:\n"+"Name: "+name+"\nAddress: "+address+
+					"\nType: "+type+"\nSize: "+size+"\nQuantity: "+quantityString+"\nToppings: "+toppings);
 		}
-		if(e.getSource()==orderButton){
-			totals = pizzaPrice+toppingPrice;
-			total = totals+"";
-			totalFinalLabel.setText(total);
+		else{
+			nameText.setText("");
+			addressText.setText("");
+			typeMenu.setSelectedIndex(0);;
+			sizeButtonGroup.clearSelection();
+			toppingCheeseBox.setSelected(false);
+			toppingSausageBox.setSelected(false);
+			toppingBaconBox.setSelected(false);
+			quantityMenu.setSelectedIndex(0);
 		}
 	}
 	
