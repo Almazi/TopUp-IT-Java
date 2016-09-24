@@ -37,18 +37,6 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 	JButton orderButton;
 	JButton cancelButton;
 	
-	String name;
-	String address;
-	String total;
-	int pizzaPrice = 0;
-	int toppingPrice = 0;;
-	int totals = 0;
-	int quantity = 0;
-	
-	String type;
-	String size;
-	String toppings = " ";
-	String quantityString;
 	
 	PizzaOrderTaker(){
 		frame = new JFrame("Take The Order");
@@ -177,6 +165,19 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
+		String name;
+		String address;
+		String total;
+		int pizzaPrice = 0;
+		int toppingPrice = 0;;
+		int totals = 0;
+		int quantity = 0;
+		
+		String type;
+		String size = null;
+		String toppings = " ";
+		String quantityString;
+		
 		if(e.getSource() == orderButton){
 			System.out.println(pizzaPrice);
 			name = nameText.getText();
@@ -184,25 +185,37 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 			type = typeMenu.getSelectedItem().toString();
 			if(largeRadioButton.isSelected()){
 				size = largeRadioButton.getText();
+				pizzaPrice = 1099;
 			}
 			if(mediumRadioButton.isSelected()){
 				size = mediumRadioButton.getText();
+				pizzaPrice = 799;
 			}
 			if(smallRadioButton.isSelected()){
 				size = smallRadioButton.getText();
+				pizzaPrice = 599;
 			}
 			if(toppingCheeseBox.isSelected()){
-				toppings = toppings + toppingCheeseBox.getText();
+				toppings = toppings + toppingCheeseBox.getText() + ", ";
+				toppingPrice = toppingPrice + 60;
 			}
 			if(toppingSausageBox.isSelected()){
-				toppings = toppings + toppingSausageBox.getText();
-			}if(toppingBaconBox.isSelected()){
-				toppings = toppings + toppingBaconBox.getText();
+				toppings = toppings + toppingSausageBox.getText() + ", ";
+				toppingPrice = toppingPrice + 90;
 			}
-			
+			if(toppingBaconBox.isSelected()){
+				toppings = toppings + toppingBaconBox.getText() + ", ";
+				toppingPrice = toppingPrice + 120;
+			}
+			quantity = quantityMenu.getSelectedIndex()+1;
 			quantityString = quantityMenu.getSelectedItem().toString();
-			JOptionPane.showMessageDialog(null, "Order Detail:\n"+"Name: "+name+"\nAddress: "+address+
-					"\nType: "+type+"\nSize: "+size+"\nQuantity: "+quantityString+"\nToppings: "+toppings);
+			
+			totals = quantity * (pizzaPrice + toppingPrice); 
+			total = totals+"";
+			totalFinalLabel.setText(total);
+			JOptionPane.showMessageDialog(null, "Order Detail:\n"+"Name: "+name+
+					"\nAddress: "+address+"\nType: "+type+"\nSize: "+size+"\nQuantity: "+
+					quantityString+"\nToppings: "+toppings+"\nTotal: "+total);
 		}
 		else{
 			nameText.setText("");
@@ -213,6 +226,7 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 			toppingSausageBox.setSelected(false);
 			toppingBaconBox.setSelected(false);
 			quantityMenu.setSelectedIndex(0);
+			totalFinalLabel.setText("0");
 		}
 	}
 	
