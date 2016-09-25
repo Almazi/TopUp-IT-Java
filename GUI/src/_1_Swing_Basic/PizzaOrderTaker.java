@@ -91,13 +91,13 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 		sizeButtonGroup.add(smallRadioButton);
 		
 		
-		toppingCheeseBox = new JCheckBox("Extra Cheese!");
+		toppingCheeseBox = new JCheckBox("Extra Cheese");
 		toppingCheeseBox.setBounds(120, 290, 170, 30);
 		
-		toppingSausageBox = new JCheckBox("Sausage!");
+		toppingSausageBox = new JCheckBox("Sausage");
 		toppingSausageBox.setBounds(120, 320, 170, 30);
 		
-		toppingBaconBox = new JCheckBox("Bacon!");
+		toppingBaconBox = new JCheckBox("Bacon");
 		toppingBaconBox.setBounds(120, 350, 170, 30);
 		
 		
