@@ -62,13 +62,12 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 		totalLabel = new JLabel("Total: ");
 		totalLabel.setBounds(220,460,50,30);
 		
-		totalFinalLabel = new JLabel("0");
+		totalFinalLabel = new JLabel("0 /-");
 		totalFinalLabel.setBounds(270,460,50,30);
 		
 		
 		nameText = new JTextField();
 		nameText.setBounds(130,30,170,30);
-		nameText.addActionListener(this);
 		
 		addressText = new JTextArea();
 		addressText.setBounds(130,80,170,80);
@@ -78,7 +77,6 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 		typeMenu.addItem("New York-Style Pizza");
 		typeMenu.addItem("Neapolitan Pizza");
 		typeMenu.addItem("Deep Dish Pizza");
-		typeMenu.addItemListener(this);
 
 		largeRadioButton = new JRadioButton("Large for 6 Person");
 		largeRadioButton.setBounds(120, 220, 170, 30);
@@ -92,21 +90,15 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 		sizeButtonGroup.add(mediumRadioButton);
 		sizeButtonGroup.add(smallRadioButton);
 		
-		largeRadioButton.addItemListener(this);
-		mediumRadioButton.addItemListener(this);
-		smallRadioButton.addItemListener(this);
 		
 		toppingCheeseBox = new JCheckBox("Extra Cheese!");
 		toppingCheeseBox.setBounds(120, 290, 170, 30);
-		toppingCheeseBox.addItemListener(this);
 		
 		toppingSausageBox = new JCheckBox("Sausage!");
 		toppingSausageBox.setBounds(120, 320, 170, 30);
-		toppingSausageBox.addItemListener(this);
 		
 		toppingBaconBox = new JCheckBox("Bacon!");
 		toppingBaconBox.setBounds(120, 350, 170, 30);
-		toppingBaconBox.addItemListener(this);
 		
 		
 		quantityMenu = new JComboBox();
@@ -121,7 +113,6 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 		quantityMenu.addItem("8");
 		quantityMenu.addItem("9");
 		quantityMenu.addItem("10");
-		quantityMenu.addItemListener(this);
 		
 		orderButton = new JButton("Order");
 		orderButton.setBounds(30,460,70,30);
@@ -212,7 +203,7 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 			quantityString = quantityMenu.getSelectedItem().toString();
 			
 			totals = quantity * (pizzaPrice + toppingPrice); 
-			total = totals+"";
+			total = totals+" /-";
 			totalFinalLabel.setText(total);
 			JOptionPane.showMessageDialog(null, "Order Detail:\n"+"Name: "+name+
 					"\nAddress: "+address+"\nType: "+type+"\nSize: "+size+"\nQuantity: "+
@@ -227,7 +218,7 @@ public class PizzaOrderTaker implements ActionListener, ItemListener {
 			toppingSausageBox.setSelected(false);
 			toppingBaconBox.setSelected(false);
 			quantityMenu.setSelectedIndex(0);
-			totalFinalLabel.setText("0");
+			totalFinalLabel.setText("0 /-");
 		}
 	}
 	
