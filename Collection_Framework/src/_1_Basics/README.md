@@ -24,10 +24,26 @@ Using simple the three methods: ADD, REMOVE, DISPLAY of all these classes.
 # List of stuff:
 Adding element in the object for all the classes are almost same. But I had to work and learn about removing and displaying the object elements. Also I made sure for Map interface implemented classes I show two input boxes: Key, Value instead of common "Object" input box.
 
-![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/Swing/PizzaOrder%20-%20Blank.png "After Opening")
+Also you will only see the classes of particular interface you chose, not all the classes.
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Introduction.png "Launch Window")
 
 
-![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/Swing/PizzaOrder%20-%20Filling%20Up.png "Filling Up")
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Interfaces.png "Interface List")
 
 
-![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/Swing/PizzaOrder%20-%20After%20Order%20Pressed.png "Order Button Pressed")
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/List_Classes.png "Classes of List Interface")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Set_Classes.png "Classes of Set Interface")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Map_Classes.png "Classes of Map Interface")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Added_Element.png "Adding object")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Display_List.png "Displaying object")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Remove_Conditions.png "Try Catch condition when removing objects")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/After_Removing_Display.png "Displaying after removing object")
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/Collection_Framework/src/_1_Basics/Screenshots/Key_Value_Boxes_for_Map_Classes.png "Unique Key Value input boxes for Map interface classes")
