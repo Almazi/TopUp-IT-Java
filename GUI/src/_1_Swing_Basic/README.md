@@ -1,4 +1,4 @@
-# Pizza Order Taker GUI app.
+# Pizza Order Taker GUI app
 
 # After Launching
 ![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/_1_Swing_Basic/PizzaOrder%20-%20Blank.png "After Opening")
