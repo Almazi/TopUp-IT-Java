@@ -1,8 +1,8 @@
-# Top Up IT Training Assignments and Tests
-All my codes of the projects and assignments I am doing in this training program.
+# Pizza Order Taker GUI app.
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/Swing/PizzaOrder%20-%20Blank.png "After Opening")
 
-# List of stuff:
 
-1. Class test of ten codes.
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/Swing/PizzaOrder%20-%20Filling%20Up.png "Filling Up")
 
-2. Vacation project.
+
+![Alt text](https://github.com/Almazi/TopUp-IT-Java/blob/master/GUI/src/Swing/PizzaOrder%20-%20After%20Order%20Pressed.png "Order Button Pressed")
