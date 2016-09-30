@@ -295,7 +295,7 @@ public class _1_Add_Remove_Display implements ActionListener, ItemListener {
 		}
 		
 		//LinkedHashMap
-		if(mapMenu.getSelectedIndex()==05){
+		if(mapMenu.getSelectedIndex() == 0){
 
 			if(e.getSource()==addButton){
 				lhmc.key = key;
